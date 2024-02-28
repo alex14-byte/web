@@ -726,7 +726,7 @@ width: 100%;
     margin-bottom: 50px;
   }
   .blog_container_first{
-    height: 580px;
+    height: 100%;
   }
   .blog_containers_second{
     padding: 0% 15%;
@@ -752,6 +752,7 @@ width: 100%;
   .expectations_section_text h2{
     width: 100%;
   }
+
 }
 
 @media screen and (max-width: 1050px) {
@@ -986,10 +987,6 @@ width: 100%;
 .foot_menu_items .foot_menu_item_start {
   margin-left: 20px;
 }
-.foot_menu_items .foot_menu_items_end {
-  align-items: center;
-}
-
 
 }
 
@@ -1062,19 +1059,45 @@ width: 100%;
 
 @media screen and (max-width: 550px) {
   .cta{
-    margin-top: 75px;
-
-    
+    margin-top: 75px; 
   }
+  .foot_menu{
+    margin-top: 125px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .foot_menu_items{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .foot_menu_items .foot_menu_item{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+  } 
   .foot_menu_start{
     width: 100%;
   }
-  .foot_menu_start p{
-    width: 85%;
+  .foot_menu_start .header__logo img{
+    width: 100%;
   }
   .foot_menu_start p{
     width: 100%;
+    text-wrap: pretty;
+    text-align: center;
+    margin-bottom: 20px;
   }
+  .foot_menu_items_end p {
+    width: 80%;
+    text-align: center;
+  }
+
+ 
   .header .header__menu .menu__close {
     position: absolute;
     right: -25px;
@@ -1114,8 +1137,39 @@ width: 100%;
   }
   .foot_menu{
     margin-top: 125px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
+  
   .foot_menu_items{
-    column-gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
   }
+  .foot_menu_items .foot_menu_item{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+  } 
+  .foot_menu_start{
+    width: 100%;
+  }
+  .foot_menu_start .header__logo img{
+    width: 100%;
+  }
+  .foot_menu_start p{
+    width: 100%;
+    text-wrap: pretty;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .foot_menu_items_end p {
+    width: 80%;
+    text-align: center;
+  }
+
+
 }
