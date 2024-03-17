@@ -53,58 +53,37 @@ export const createBlogTitleTemplate = (title) => {
 `;
 }
 
-export const createBlogContainerFirstTemplate = ({data, header, link, src, alt}) => {
-    return `
-    <div class="blog_container_first">
-          <img src=${src} alt=${alt}>
-          <div class="blog_container_first_text">
-            <p>${data}</p>
-            <h3>${header}</h3>
-            <a href="">${link}</a>
-          </div>
-    </div>
+export const createBlogContainerTemplate = ({data, header, link, src, alt}, className) => {
+  return `
+  <div class="${className}">
+        <img src=${src} alt=${alt}>
+        <div class="${className}_text">
+          <p>${data}</p>
+          <h3>${header}</h3>
+          <a href="">${link}</a>
+        </div>
+  </div>
 `;
 };
 
-
-export const createBigBlogTempate = (BigBlogsData) => {
-
-    return `
-    ${BigBlogsData.map((BigBlogMapTemplate) => createBlogContainerFirstTemplate(BigBlogMapTemplate)).join("")}
-    `;
-};
-
-export const createBlogContainerSecondTemplate = ({data, header, link, src, alt}) => {
-    return `
-    <div class="blog_container_second">
-          <img src=${src} alt=${alt}>
-          <div class="blog_container_second_text">
-            <p>${data}</p>
-            <h3>${header}</h3>
-            <a href="">${link}</a>
-          </div>
-    </div>
-`;
-}
-
-  
-
-export const createSmallBlogTemplate = (SmallBlogsData) => {
-    return `
-    ${SmallBlogsData.map((SmallBlogMapTemplate) => createBlogContainerSecondTemplate(SmallBlogMapTemplate)).join("")}
-    `;
+export const createBlogTemplate = (BlogsData, className) => {
+  return `
+  ${BlogsData.map((BlogData) => createBlogContainerTemplate(BlogData, className)).join("")}
+  `;
 };
       
 export const blogTemplate = ({
     title,
-    BigBlogsData,
-    SmallBlogsData,
+    classnamefirst,
+    classnamesecond,
+    FirstBlogsData,
+    SecondBlogsData,
   }) => {
     const titleTemplate = createBlogTitleTemplate(title);
-    const blogContainerFirstTemplate = createBigBlogTempate(BigBlogsData);
-    const blogContainerSecondTemplate = createSmallBlogTemplate(SmallBlogsData);
+    const blogContainerFirstTemplate = createBlogTemplate(FirstBlogsData, classnamefirst);
+    const blogContainerSecondTemplate = createBlogTemplate(SecondBlogsData, classnamesecond);
   
-    const resultTemplate = `
+    return `
     <div> ${titleTemplate}</div>
     <div class="blog_containers">
     ${blogContainerFirstTemplate}
@@ -113,6 +92,4 @@ export const blogTemplate = ({
     </div>
     </div>
     `;
-
-    return resultTemplate;
   };

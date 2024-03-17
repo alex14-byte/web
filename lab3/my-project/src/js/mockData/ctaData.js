@@ -1,12 +1,9 @@
-export const early_access = "Запросить ранний доступ";
+export const button_link = "Запросить ранний доступ";
 
-export const buttonData = 'Начать'
-  
 export const description = "Зарегистрируйтесь и начните исследовать безграничные возможности.";
 
 const ctaData = {
-    early_access,
-    buttonData,
+    button_link,
     description
     };
 

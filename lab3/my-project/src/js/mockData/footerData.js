@@ -1,6 +1,3 @@
-export const header = "Хотите Шагнуть в Будущее Раньше Других?";
-
-export const buttonData = "Запросить ранний доступ";
 
 export const text = "ул. Профессора Поздеева, 13, к.Г, Пермь, Пермский край, 614013 Все права защищены"
 
@@ -8,7 +5,8 @@ export const src = "./assets/img/logo.svg";
 
 export const alt = "";
 
-export const LeftElements = [
+export const footerElements = [
+  [
     {
       href: "#",
       text: "Овероны"
@@ -25,8 +23,8 @@ export const LeftElements = [
       href: "#",
       text: "Контакты"
     },
-  ];
-  export const CenterElements = [
+  ],
+  [
     {
       href: "#",
       text: "Условия использования"
@@ -39,8 +37,8 @@ export const LeftElements = [
       href: "#",
       text: "Конаткты"
     },
-  ];
-  export const RightElements = [
+  ],
+  [
     {
       href: "#",
       text: "ул. Профессора Поздеева, 13, к.Г, Пермь"
@@ -53,16 +51,14 @@ export const LeftElements = [
       href: "#",
       text: "info@pstu.ru"
     },
-  ];
+  ]
+
+]
 
 export const footerData = {
-    header,
-    buttonData,
     src,
     alt,
     text,
-    LeftElements,
-    CenterElements,
-    RightElements,
+    footerElements
   };
 

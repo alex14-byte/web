@@ -1,4 +1,4 @@
-export const early_access = "Запросить ранний доступ";
+export const button_link = "Запросить ранний доступ";
 
 export const img = {
 src: "./assets/img/expectations/woman.png",
@@ -12,8 +12,9 @@ export const description =
 "Однако кровать для помощи в путешествии неприятна. Не мысли все осуществляют благословение. Снисхождение ко всему, радость, изменение бурной привязанности. Вечеринку мы лет на заказ разрешили.";
 
 export const expectationsData = {
-early_access,
+button_link,
 img,
 title,
 description,
 };
+

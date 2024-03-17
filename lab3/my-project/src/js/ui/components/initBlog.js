@@ -4,8 +4,7 @@ import { blogTemplate } from "../templates/blogTemplate.js";
 const initBlog = () => {
   const blogNode = document.querySelector(".blog");
 
-  blogNode.insertAdjacentHTML(
-    "beforeend",
+  blogNode.insertAdjacentHTML("beforeend",
     blogTemplate(blogData)
   );
 };

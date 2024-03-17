@@ -10,58 +10,44 @@
 </div>
 </section> */}
 
-export const createTitleTemplate = (title) => {
+  export const createCardTemplate = (description, title) => {
     return `
-        <h2>${title}</h2>
-    `;
-  };
-  export const createCtaTopBlueTemplate = (early_access) => {
-    return `
-    <a href="#" class="left_cta_blue">${early_access}</a>
-    `;
-  };
-  export const createCtaBottomOrangeTemplate = (early_access) => {
-    return `
-    <a href="#" class="left_cta_orange">${early_access}</a>
-    `;
-  };
-  
-  
-  export const createDescriptionTemplate = (description) => {
-    return `
+      <h2>${title}</h2>
       <p>${description}</p>
     `;
   };
   
+export const createButtonLinkTemplate = (button_link, classname) => {
+    return `
+    <a href="#" class="left_cta_${classname}">${button_link}</a>
+    `;
+  };
+
   export const createImgTemplate = ({ src, alt }) => {
     return `
+    <div class = "expectations_section_img">
       <img src="${src}" alt="${alt}" />
+    </div> 
     `;
   };
   
   export const expectationsTemplate = ({
-    early_access,
+    button_link,
     img,
     title,
     description,
   }) => {
-    const titleTemplate = createTitleTemplate(title);
-    const ctaTopBlueTemplate = createCtaTopBlueTemplate(early_access);
-    const ctaBottomOrangeTemplate = createCtaBottomOrangeTemplate(early_access);
-    const descriptionTemplate = createDescriptionTemplate(description);
+    const buttonLinkBlueTemplate = createButtonLinkTemplate(button_link, "blue");
+    const buttonLinkOrangeTemplate = createButtonLinkTemplate(button_link, "orange");
+    const cardTemplate = createCardTemplate(description, title);
     const imgTemplate = createImgTemplate(img);
   
-    const resultTemplate = `
+    return `
     <div class="expectations_section_img">
         ${imgTemplate}
     </div>
     <div class="expectations_section_text">
-        ${ctaTopBlueTemplate}
-        ${titleTemplate}
-        ${descriptionTemplate}
-        ${ctaBottomOrangeTemplate}
+        ${buttonLinkBlueTemplate + cardTemplate + buttonLinkOrangeTemplate}
     </div>
-    `;
-
-    return resultTemplate;
+    ` ;
   };

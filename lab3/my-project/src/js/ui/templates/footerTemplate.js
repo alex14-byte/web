@@ -39,13 +39,6 @@
     </section> */}
 
 
-export const createHeaderTemplate = (header) => {
-    return `<h1>${header}</h1>`
-}
-
-export const createButtonDataTemplate = (buttonData) => {
-    return `<button>${buttonData}</button>`
-}
 
 export const createFooterImgTemplate = (src, alt) => {
     return `<img class = "link__name" src=${src} alt=${alt} width="118" height="30"/>`
@@ -60,43 +53,37 @@ export const createFooterLinks = ({href, text}) => {
     return `<a href=${href}>${text}</a>`
 }
 
-export const createFooterElementsTemplate = (LeftElements, CenterElements, RightElements) => {
-    return `<div class="foot_menu_item foot_menu_item_start">
-    <h3>Ссылки</h3>
-    ${LeftElements.map((LeftElements) => createFooterLinks(LeftElements)).join("")}
-  </div>
-  <div class="foot_menu_item">
-    <h3>Компания</h3>
-    ${CenterElements.map((CenterElements) => createFooterLinks(CenterElements)).join("")}
-  </div>
-  <div class="foot_menu_item foot_menu_items_end">
-    <h3>Контакты</h3>
-    ${RightElements.map((RightElements) => createFooterLinks(RightElements)).join("")}
-  </div>`
-}
+export const createFooterElementsTemplate = (footerElements) => {
+
+  const footerSections = [
+    { title: 'Ссылки', elements: footerElement[0]},
+    { title: 'Компания', elements: footerElements[1]},
+    { title: 'Контакты', elements: footerElements[2]},
+  ];
+    return footerSections.map((section) => `
+    <div class="foot_menu_item">
+      <h3>${section.title}</h3>
+      ${section.elements.map((element) => createFooterLinks(element)).join("")}
+    </div>
+  `).join("");
+  }
 
 
 export const footerTemplate = ({
-    header,
-    buttonData,
     src,
     alt,
     text,
-    LeftElements,
-    CenterElements,
-    RightElements,
+    footerElements
 }) => {
-    const headerTemplate = createHeaderTemplate(header);
-    const buttonTemplate = createButtonDataTemplate(buttonData);
     const footerTextTemplate = createFooterTextTemplate(text);
     const footerImgTemplate = createFooterImgTemplate(src, alt);
-    const footerElementsTemplate = createFooterElementsTemplate(LeftElements,RightElements,CenterElements)
+    const footerElementsTemplate = createFooterElementsTemplate(footerElements)
 
 
     return ` <div>
     <div class="go_to_feature">
-      ${headerTemplate}
-      ${buttonTemplate}
+      <h1>Хотите Шагнуть в Будущее Раньше Других?</h1>
+      <button>Запросить ранний доступ</button>
     </div>
     <div class="foot_menu">
       <div class="foot_menu_start">

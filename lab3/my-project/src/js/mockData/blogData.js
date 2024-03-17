@@ -1,6 +1,8 @@
 export const title = "Многое Происходит, Мы Ведем об Этом Блог."   
+export const classnamefirst =  "blog_container_first"
+export const classnamesecond =  "blog_container_second"
 
-export const BigBlogsData = [{
+export const FirstBlogsData = [{
     data: "Сент 26, 2021",
     header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
     link: "Читать полную статью",
@@ -8,7 +10,7 @@ export const BigBlogsData = [{
     alt: "",
 }];
 
-export const SmallBlogsData = [
+export const SecondBlogsData = [
 {
     data: "Сент 26, 2021",
     header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
@@ -41,8 +43,10 @@ export const SmallBlogsData = [
 
 const blogData = {
     title, 
-    BigBlogsData, 
-    SmallBlogsData,
+    classnamefirst,
+    classnamesecond,
+    FirstBlogsData, 
+    SecondBlogsData,
 };
 
 

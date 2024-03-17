@@ -10,44 +10,27 @@
         </div>
     </section> */}
     
-export const createCtaEarlyTemplate = (early_access) => {
+export const createCtaTextTemplate = (button_link, description) => {
     return `
-    <p>${early_access}</p>
-`;
-}
-
-export const createCtaDescriptionTemplate = (description) => {
-    return `
+    <p>${button_link}</p>
     <h3>${description}</h3>
 `;
 }
 
-export const creaeCtaButtonTemplate = (buttonData) => {
-    return `
-    <button><h3>${buttonData}<h3></button>
-`;
-}
-      
 export const ctaTemplate = ({
-    early_access,
-    buttonData,
+    button_link,
     description,
   }) => {
-    const earlyTemplate = createCtaEarlyTemplate(early_access);
-    const ctaDescriptionTemplate = createCtaDescriptionTemplate(description);
-    const ctaButtonTemplate = creaeCtaButtonTemplate(buttonData);
-  
-    const resultTemplate = `
+    const ctaTextTemplate = createCtaTextTemplate(button_link, description);
+
+    return `
     <div class="cta_rectangle">
             <div class="cta_text">
-                ${earlyTemplate}
-                ${ctaDescriptionTemplate}
+                ${ctaTextTemplate}
             </div>
             <div class="cta_button">
-                ${ctaButtonTemplate}   
+                <button><h3>Начать<h3></button>   
             </div>
         </div>
-    `;
-
-    return resultTemplate;
+    `
   };

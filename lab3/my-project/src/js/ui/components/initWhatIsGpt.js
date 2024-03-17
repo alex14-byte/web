@@ -4,8 +4,7 @@ import { whatIsGptTemplate } from "../templates/whatIsGptTemplate.js";
 const initWhatIsGpt = () => {
   const whatIsGptNode = document.querySelector(".what_is_chatgpt_section");
 
-  whatIsGptNode.insertAdjacentHTML(
-    "beforeend",
+  whatIsGptNode.insertAdjacentHTML("beforeend",
     whatIsGptTemplate(whatIsGptData)
   );
 };
