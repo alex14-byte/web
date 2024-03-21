@@ -47,49 +47,39 @@
         </div>
       </div>
     </section> */}
-export const createBlogTitleTemplate = (title) => {
-    return `
-    <h1${title}</h1>
-`;
-}
+    export const createBlogTitleTemplate = (title) => {
+      return `<h1>${title}</h1>`;
+    };
 
-export const createBlogContainerTemplate = ({data, header, link, src, alt}, className) => {
-  return `
-  <div class="${className}">
-        <img src=${src} alt=${alt}>
-        <div class="${className}_text">
-          <p>${data}</p>
-          <h3>${header}</h3>
-          <a href="">${link}</a>
+    export const createBlogContainerTemplate = ({ classname, elements }) => {
+      return elements.map(({ data, header, link_text, link, img }) => `
+       <div class="${classname}">
+      <img src="${img.src}" alt="${img.alt}">
+      <div class="${classname}_text">
+        <p>${data}</p>
+        <h3>${header}</h3>
+        <a href="${link}">${link_text}</a>
+      </div>
+    </div>
+      `).join("");
+    };
+
+    export const createBlogTemplate = (BlogsData) => {
+      return BlogsData.map((section) => createBlogContainerTemplate(section)).join("");
+    };
+    
+    export const blogTemplate = ( {title, BlogsData }) => {
+      const titleTemplate = createBlogTitleTemplate(title);
+      const blogContainerFirstTemplate = createBlogTemplate(BlogsData[0]);
+      const blogContainerSecondTemplate = createBlogTemplate(BlogsData[1]);
+    
+      return `
+        <div>${titleTemplate}</div>
+        <div class="blog_containers">
+          ${blogContainerFirstTemplate}
+        <div class='blog_containers_second'>
+          ${blogContainerSecondTemplate}
         </div>
-  </div>
-`;
-};
-
-export const createBlogTemplate = (BlogsData, className) => {
-  return `
-  ${BlogsData.map((BlogData) => createBlogContainerTemplate(BlogData, className)).join("")}
-  `;
-};
-      
-export const blogTemplate = ({
-    title,
-    classnamefirst,
-    classnamesecond,
-    FirstBlogsData,
-    SecondBlogsData,
-  }) => {
-    const titleTemplate = createBlogTitleTemplate(title);
-    const blogContainerFirstTemplate = createBlogTemplate(FirstBlogsData, classnamefirst);
-    const blogContainerSecondTemplate = createBlogTemplate(SecondBlogsData, classnamesecond);
-  
-    return `
-    <div> ${titleTemplate}</div>
-    <div class="blog_containers">
-    ${blogContainerFirstTemplate}
-    <div class = "blog_containers_second">
-    ${blogContainerSecondTemplate}
-    </div>
-    </div>
-    `;
-  };
+        </div>
+      `;
+    };

@@ -1,8 +1,6 @@
 
 export const text = "ул. Профессора Поздеева, 13, к.Г, Пермь, Пермский край, 614013 Все права защищены"
 
-export const src = "./assets/img/logo.svg";
-
 export const alt = "";
 
 export const footerElements = [
@@ -64,7 +62,6 @@ export const footerElements = [
 ];
 
 const footerData = {
-    src,
     alt,
     text,
     footerElements

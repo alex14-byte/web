@@ -55,12 +55,7 @@ export const createFooterLinks = ({href, text}) => {
 
 export const createFooterElementsTemplate = (footerElements) => {
 
-  const footerSections = [
-    { title: 'Ссылки', elements: footerElements[0]},
-    { title: 'Компания', elements: footerElements[1]},
-    { title: 'Контакты', elements: footerElements[2]},
-  ];
-    return footerSections.map((section) => `
+    return footerElements.map((section) => `
     <div class="foot_menu_item">
       <h3>${section.title}</h3>
       ${section.elements.map((element) => createFooterLinks(element)).join("")}
