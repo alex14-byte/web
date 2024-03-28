@@ -6,8 +6,10 @@ export const BlogsData = [
     elements: [{
       data: "Сент 26, 2021",
       header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
-      link_text: "Читать полную статью",
-      link: '',
+      link:{
+        text: "Читать полную статью",
+        href: '',
+      },
       img: {
         src: "./assets/img/blog/1.png",
         alt: "",
@@ -21,7 +23,10 @@ export const BlogsData = [
         data: "Сент 26, 2021",
         header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
         link_text: "Читать полную статью",
-        link: "",
+        link:{
+          text: "Читать полную статью",
+          href: '',
+        },
         img: {
           src: "./assets/img/blog/2.png",
           alt: "",
@@ -31,7 +36,10 @@ export const BlogsData = [
         data: "Сент 26, 2021",
         header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
         link_text: "Читать полную статью",
-        link: "",
+        link:{
+          text: "Читать полную статью",
+          href: '',
+        },
         img: {
           src: "./assets/img/blog/3.png",
           alt: "",
@@ -41,7 +49,10 @@ export const BlogsData = [
         data: "Сент 26, 2021",
         header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
         link_text: "Читать полную статью",
-        link: "",
+        link:{
+          text: "Читать полную статью",
+          href: '',
+        },
         img: {
           src: "./assets/img/blog/4.png",
           alt: "",
@@ -51,7 +62,10 @@ export const BlogsData = [
         data: "Сент 26, 2021",
         header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
         link_text: "Читать полную статью",
-        link: "",
+        link:{
+          text: "Читать полную статью",
+          href: '',
+        },
         img: {
           src: "./assets/img/blog/5.png",
           alt: "",

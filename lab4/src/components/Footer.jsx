@@ -37,7 +37,7 @@ export const FooterElements = ({ footerElements }) => {
             <div className="foot_menu">
                 <div className="foot_menu_start">
                     <div className="header__logo">
-                        <a href="#" className="logo__link">
+                        <a href='/#' className="logo__link">
                             <FooterImg alt={alt} />
                         </a>
                     </div>

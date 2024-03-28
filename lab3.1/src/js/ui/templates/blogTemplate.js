@@ -58,7 +58,7 @@
       <div class="${classname}_text">
         <p>${data}</p>
         <h3>${header}</h3>
-        <a href="${link}">${link_text}</a>
+        <a href="${link.href}">${link.text}</a>
       </div>
     </div>
       `).join("");

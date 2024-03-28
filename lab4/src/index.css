@@ -131,7 +131,7 @@ p {
 }
 
 .lined_header {
-  background:  url("./assets/img/gradient_line.svg") no-repeat 0 0 transparent;
+  background:  url(./assets/img/gradient_line.svg) no-repeat 0 0 transparent;
   padding: 1rem 0;
 }
 
@@ -322,7 +322,7 @@ p {
   padding: 3rem;
   margin: 6rem 0;
   row-gap: 7rem;
-  background: url("./assets/img/what_is_gpt_3_bg.svg") no-repeat 0 0 / cover;
+  background: url(./assets/img/what_is_gpt_3_bg.svg) no-repeat 0 0 / cover;
 }
 
 .what_is_chatgpt_section .what_is_chatgpt_section__top {
@@ -343,7 +343,7 @@ p {
 .what_is_chatgpt_section .what_is_chatgpt_section__middle {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .what_is_chatgpt_section .what_is_chatgpt_section__middle .middle__header {
@@ -368,7 +368,7 @@ p {
 .what_is_chatgpt_section .what_is_chatgpt_section__bottom {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   column-gap: 2rem;
 }
 
