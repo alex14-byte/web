@@ -6,7 +6,7 @@ export const BlogsData = [
     elements: [{
       data: "Сент 26, 2021",
       header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
-      link:{
+      links:{
         text: "Читать полную статью",
         href: '',
       },

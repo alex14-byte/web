@@ -23,19 +23,19 @@ export const BlogContainerImg = ({ alt }) => {
         case '5':
             return <img src={img5} alt={alt} />;
         default:
-            return null; // Handle unknown alt values
+            return null; 
     }
 }
 
 export const BlogContainer = ({ classname, elements }) => {
 
-    return elements.map(({ data, header, link_text, link, alt }, index) => (
+    return elements.map(({ data, header, link, img }, index) => (
         <div key={index} className={classname}>
-            <BlogContainerImg alt={alt} />
+            <BlogContainerImg alt={img.alt} />
             <div className={`${classname}_text`}>
                 <p>{data}</p>
                 <h3>{header}</h3>
-                <a href={link}>{link_text}</a>
+                <a href={link.href}>{link.text}</a>
             </div>
         </div>
     ));
@@ -47,7 +47,7 @@ export const BlogElements = ({ BlogsData }) => {
 const Blog = () => {
     const { title, BlogsData } = blogData;
     if (!title || !Array.isArray(BlogsData)) {
-        return null; // Handle missing title or non-array BlogsData
+        return null; 
     }
     return (
         <div>

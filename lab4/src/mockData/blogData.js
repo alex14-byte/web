@@ -6,9 +6,14 @@ export const BlogsData = [
       elements: [{
         data: "Сент 26, 2021",
         header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
-        link_text: "Читать полную статью",
-        link: '',
-        alt: "1",
+        img: {
+          src: "../assets/img/blog/1.png",
+          alt: "1",
+        },
+        link: {
+          text: "Читать полную статью",
+          href: '',
+        }
       }]
     }],
     [{
@@ -17,30 +22,50 @@ export const BlogsData = [
         {
           data: "Сент 26, 2021",
           header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
-          link_text: "Читать полную статью",
-          link: "",
-          alt: "2",
+          img: {
+            src: "../assets/img/blog/2.png",
+            alt: "2",
+          },
+          link: {
+            text: "Читать полную статью",
+            href: '',
+          }
         },
         {
           data: "Сент 26, 2021",
           header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
-          link_text: "Читать полную статью",
-          link: "",
-          alt: "3",
+          img: {
+            src: "../assets/img/blog/3.png",
+            alt: "3",
+          },
+          link: {
+            text: "Читать полную статью",
+            href: '',
+          }
         },
         {
           data: "Сент 26, 2021",
           header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
-          link_text: "Читать полную статью",
-          link: "",
-          alt: "4",
+          img: {
+            src: "../assets/img/blog/4.png",
+            alt: "4",
+          },
+          link: {
+            text: "Читать полную статью",
+            href: '',
+          }
         },
         {
           data: "Сент 26, 2021",
           header: "GPT-3 и Openai – это будущее. Давайте разберемся, как это?",
-          link_text: "Читать полную статью",
-          link: "",
-          alt: "5",
+          img: {
+            src: "../assets/img/blog/5.png",
+            alt: "5",
+          },
+          link: {
+            text: "Читать полную статью",
+            href: '',
+          }
         }
       ]
     }
